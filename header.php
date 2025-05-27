@@ -27,16 +27,6 @@ do_action( 'allinhere_before_site_header' ); // This hook is outside the conditi
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'allinhere' ); ?></a>
 
-	<?php
-	$allinhere_display_header = get_theme_mod( 'allinhere_show_header', true );
-
-	// Hide header on the homepage by default
-	if ( is_front_page() ) {
-		$allinhere_display_header = false;
-	}
-
-	if ( $allinhere_display_header ) : 
-	?>
 	<header id="masthead" class="site-header" role="banner">
 		<?php do_action( 'allinhere_header' ); ?>
 		<div class="site-branding">
@@ -72,9 +62,6 @@ do_action( 'allinhere_before_site_header' ); // This hook is outside the conditi
 		</nav><!-- #site-navigation -->
 		<?php do_action( 'allinhere_after_navigation' ); ?>
 	</header><!-- #masthead -->
-	<?php 
-	endif; // end $allinhere_display_header
-	?>
 
 	<?php do_action( 'allinhere_before_content' ); // This hook is outside the conditional display of the header. ?>
 	<div id="content" class="site-content">

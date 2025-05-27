@@ -13,16 +13,6 @@
 	</div><!-- #content -->
 
 	<?php do_action( 'allinhere_before_footer_content' ); // This hook is outside the conditional display of the footer. ?>
-	<?php
-	$allinhere_display_footer = get_theme_mod( 'allinhere_show_footer', true );
-
-	// Hide footer on the homepage by default
-	if ( is_front_page() ) {
-		$allinhere_display_footer = false;
-	}
-
-	if ( $allinhere_display_footer ) : 
-	?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<?php do_action( 'allinhere_footer' ); // This hook is inside, tied to the visual footer. ?>
 		<div class="site-info">
@@ -39,9 +29,6 @@
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-	<?php 
-	endif; // end $allinhere_display_footer
-	?>
 	<?php do_action( 'allinhere_after_footer_content' ); // This hook is outside the conditional display of the footer. ?>
 </div><!-- #page -->
 
