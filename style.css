@@ -1,0 +1,52 @@
+/*
+Theme Name: ALLINHERE
+Theme URI: https://m-ibrahim.carrd.co
+Author: M.Ibrahim
+Author URI: https://m-ibrahim.carrd.co
+Description: A fast, clean, lightweight WordPress theme. Built for Elementor, WooCommerce, and responsive-first UX.
+Version: 1.0.0
+Requires at least: 5.2
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: allinhere
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+   background-color: #f1f1f1;
+   border-radius: 3px;
+   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+   clip: auto !important;
+   clip-path: none;
+   color: #21759b;
+   display: block;
+   font-size: 14px;
+   font-size: 0.875rem;
+   font-weight: bold;
+   height: auto;
+   left: 5px;
+   line-height: normal;
+   padding: 15px 23px 14px;
+   text-decoration: none;
+   top: 5px;
+   width: auto;
+   z-index: 100000; /* Above WP toolbar. */
+}

@@ -1,0 +1,98 @@
+/*
+Theme Name: ALLINHERE RTL
+Description: RTL styles for ALLINHERE theme.
+*/
+body.rtl {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+/* Basic RTL adjustments can start here if needed */
+/* For example, flipping floats, text-align, margins, paddings */
+
+/* Header */
+.site-header .site-branding {
+    float: right; /* Example: if it was floated left in LTR */
+}
+
+.site-header .main-navigation {
+    float: left; /* Example: if it was floated right in LTR */
+}
+
+/* Sidebar */
+.widget-area {
+    float: left; /* Example: if it was floated right and is the primary sidebar */
+}
+
+/* Comments */
+.comment-list .comment-author {
+    float: right;
+}
+.comment-list .comment-meta {
+    text-align: right;
+}
+.comment-form p {
+    /* Adjust margins/paddings as needed */
+}
+
+/* General Typography */
+body.rtl {
+    text-align: right;
+}
+
+ul, ol {
+    margin-right: 1.5em;
+    margin-left: 0;
+}
+
+li > ul,
+li > ol {
+    margin-right: 1.5em;
+    margin-left: 0;
+}
+
+caption, th, td {
+    text-align: right;
+}
+
+/* Forms */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea {
+    text-align: right;
+}
+
+/* Align radio and checkbox options to the right */
+.wpcf7-list-item-label {
+    margin-right: 0.5em; 
+    margin-left: 0;
+}
+
+/* Elementor specific adjustments if any */
+.elementor-section.elementor-section-stretched > .elementor-container {
+    direction: rtl;
+}
+/* Add more specific Elementor RTL rules if issues are found */
+
+/* WooCommerce specific adjustments if any */
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+    float: right;
+    margin: 0 20px 20px 0; /* Example: adjust margins */
+}
+
+.woocommerce .woocommerce-ordering,
+.woocommerce .woocommerce-result-count {
+    float: right; /* Example */
+}
+
+.woocommerce nav.woocommerce-pagination ul li {
+    float: right; /* Example */
+    margin-left: 0.5em;
+    margin-right: 0;
+}
