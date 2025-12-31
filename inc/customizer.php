@@ -55,44 +55,8 @@ function allinhere_customize_register( $wp_customize ) {
 		'settings' => 'allinhere_link_color',
 	) ) );
 
-
-	// Header and Footer Options Section
-    $wp_customize->add_section( 'allinhere_header_footer_options_section', array(
-        'title'    => __( 'Header and Footer', 'allinhere' ),
-        'priority' => 120,
-    ) );
-
-    // Show Header Setting
-    $wp_customize->add_setting( 'allinhere_show_header', array(
-        'default'           => true,
-        'sanitize_callback' => 'allinhere_sanitize_checkbox',
-        'transport'         => 'refresh', // Or postMessage if you implement JS for it
-    ) );
-    $wp_customize->add_control( 'allinhere_show_header', array(
-        'type'     => 'checkbox',
-        'label'    => __( 'Show Site Header', 'allinhere' ),
-        'section'  => 'allinhere_header_footer_options_section',
-    ) );
-
-    // Show Footer Setting
-    $wp_customize->add_setting( 'allinhere_show_footer', array(
-        'default'           => true,
-        'sanitize_callback' => 'allinhere_sanitize_checkbox',
-        'transport'         => 'refresh', // Or postMessage if you implement JS for it
-    ) );
-    $wp_customize->add_control( 'allinhere_show_footer', array(
-        'type'     => 'checkbox',
-        'label'    => __( 'Show Site Footer', 'allinhere' ),
-        'section'  => 'allinhere_header_footer_options_section',
-    ) );
-
 }
 add_action( 'customize_register', 'allinhere_customize_register' );
-
-// Sanitize checkbox
-function allinhere_sanitize_checkbox( $checked ) {
-    return ( ( isset( $checked ) && true === $checked ) ? true : false );
-}
 
 /**
  * Render the site title for the selective refresh partial.
